@@ -1,0 +1,48 @@
+ion-app{
+
+    ion-toolbar{
+        --background:#8CBBF1;
+        height: 150px;
+        
+        .profile{
+            position: relative;
+            height: 120%px;
+            top: -70px;
+            left: -70px;
+         
+        }
+        .emailLabel{
+            position: relative;
+            color: black;
+            top: -70px;
+        }
+        
+         
+    }  
+    ion-content{   
+        --background:white; 
+            
+ 
+        ion-list{
+            height: 100%;
+            
+            
+            ion-item{
+                border: 0px;
+                color: grey;
+                letter-spacing: 3px;
+                right: -50px;
+                bottom: -150px;
+                
+                ion-label{
+                   color: grey;
+                   font-family: "LatoRegular";
+                   font-size: 16px;
+            }
+      
+        }
+            .logout{
+                ion-item{
+                    bottom: -400px;}}}
+    }    
+}
