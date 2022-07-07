@@ -1,5 +1,3 @@
-# foodchecklist
-
 # Food_Checklist
 
 **Abstract**
