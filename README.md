@@ -39,11 +39,11 @@ Manage Food Inventory
 
 **Login**/**Register**
 
-![Alt text](/Images/gui/Login.png "Optional title")                                  ![Alt text](/Images/gui/Register.png "Optional title")   
+![Alt text](/Images/gui/Loginv1.png "Optional title")                                  ![Alt text](/Images/gui/Registerv1.png "Optional title")   
 
 **Menu**/**Create**
 
-![Alt text](/Images/gui/profile.png "Optional title")                                  ![Alt text](/Images/gui/create.png "Optional title")  
+![Alt text](/Images/gui/profilev1.png "Optional title")                                  ![Alt text](/Images/gui/create.png "Optional title")  
 
 **Inventory**/**Shopping List**
 
