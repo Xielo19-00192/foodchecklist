@@ -1,8 +1,16 @@
 ion-app{
 
-    ion-toolbar{
+
+    .header{
         --background:#8CBBF1;
         height: 150px;
+        h1{
+          background: white !important;
+          color: black;
+         
+         
+        }
+     
         
         .profile{
             position: relative;
@@ -11,16 +19,13 @@ ion-app{
             left: -70px;
          
         }
-        .emailLabel{
-            position: relative;
-            color: black;
-            top: -70px;
-        }
+     
         
          
     }  
     ion-content{   
         --background:white; 
+        max-height: 100%;
             
  
         ion-list{

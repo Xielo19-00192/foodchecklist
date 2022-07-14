@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, Validators, FormControl } from '@angular/forms';
+
 
 
 @Component({
@@ -6,11 +8,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginPage  {
 
-  constructor() { }
-
-  ngOnInit() {
+  group: FormGroup;
+  ngOnInit(){
+    this.group = new FormGroup({
+      UserName : new FormControl('',[Validators.required, Validators.email]),
+      Password : new FormControl('',[Validators.required, Validators.minLength(6)])
+    })
   }
+
 
 }

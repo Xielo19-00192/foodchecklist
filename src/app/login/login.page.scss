@@ -1,5 +1,5 @@
 ion-content{
-    --background: #FFFFFF;
+    --background:white;
     ion-button{
         --background: #FCEECB;
         font-family: 'ibmplexmonoregular';
@@ -9,47 +9,47 @@ ion-content{
         line-height: 21px;
   
       }
-    
-        .logo{
+    .logo{
+        position: absolute;
+        width: 478px;
+        height: 633px;
+        left: -25px;
+        top: 60px;
+     }
+     .header{
+
+   
+        h2{
             position: absolute;
-            width: 478px;
-            height: 633px;
-            left: -25px;
-            top: -105px;
+            width: 247px;
+            height: 44px;
+            left: 90px;
+            top: 309px;
+            
+            font-family: 'ibmplexmono';
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 26px;
+            text-align: center;
+            color: #8CBBF1;
+            
          }
-         .header{
-    
-       
-            h2{
-                position: absolute;
-                width: 247px;
-                height: 44px;
-                left: 90px;
-                top: 309px;
-                
-                font-family: 'ibmplexmono';
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 26px;
-                text-align: center;
-                color: #8CBBF1;
-                
-             }
-             h3{
-                position: absolute;
-                width: 350px;
-                height: 113px;
-                left: 39px;
-                top: 407px;
-                font-family: 'ibmplexmonoregular';
-                font-weight: 400;
-                font-size: 50px;
-                line-height: 65px;
-                text-align: center;
-                color: #8CBBF1;
-        }
-        
+         h3{
+            position: absolute;
+            width: 350px;
+            height: 113px;
+            left: 39px;
+            top: 407px;
+            font-family: 'ibmplexmonoregular';
+            font-weight: 400;
+            font-size: 50px;
+            line-height: 65px;
+            text-align: center;
+            color: #8CBBF1;
     }
+    
+}
+
     ion-list{
        
         
@@ -68,7 +68,14 @@ ion-content{
             right: 50px;  
         } 
       }  }
-    .forgot{
+      .loginbtn{
+        position: absolute;
+        left: 228px;
+        top: 670px;
+        width: 157px;
+        height: 48px;
+      }
+      .forgot{h3{
         position: absolute;
         left: 53px;
         top: 620px;
@@ -78,28 +85,14 @@ ion-content{
         line-height: 20px;
         letter-spacing: 0.165em;
         color: #8CBBF1;
-    }   
-    .loginbtn{
-        position: absolute;
-        left: 228px;
-        top: 650px;
-      
-
-        ion-button{
-            width: 157px;
-            height: 48px;
-            
-
-           
-        }
-    }
-    .footer{
+      }}
+      .footer{
         h3{
             position: absolute;
             width: 326px;
             height: 49px;
             left: 51px;
-            top: 713px;
+            top: 760px;
             font-family: 'LatoRegular';
             font-size: 12px;
             font-weight: 500;
@@ -117,5 +110,3 @@ ion-content{
     }
 
 }
-
-

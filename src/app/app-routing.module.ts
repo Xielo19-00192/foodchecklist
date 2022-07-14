@@ -28,6 +28,8 @@ const routes: Routes = [
     path: 'expiry',
     loadChildren: () => import('./expiry/expiry.module').then( m => m.ExpiryPageModule)
   },
+ 
+
   
 ];
 

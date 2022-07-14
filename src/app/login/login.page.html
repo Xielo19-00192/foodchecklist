@@ -1,28 +1,43 @@
-<ion-content>
-  <div class="logo"><img src="assets/logo/logo.png" alt=""></div>
- <div class="header">
-    <h2>FoodChecklist</h2>
-    <h3>Login</h3>
- </div> 
-    <ion-list>
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" ></ion-input>
-        </ion-item>
-
-        <ion-item>
-          <ion-label position="floating">Password</ion-label>
-          <ion-input type="password" ></ion-input>
-          <ion-icon slot="end" name="eye" color="grey" align-self-end></ion-icon>
-        </ion-item>
+<ion-content padding>
+  <div class="logo"><img src="assets/logo/logov2.png" alt=""></div>
+  <div class="header">
+     <h2>FoodChecklist</h2>
+     <h3>Login</h3>
+  </div> 
+  <form novalidate [formGroup]="group" (ngSubmit)="onSubmit(group)">
+    <ion-list >
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" formControlName="UserName"></ion-input>
+      </ion-item>
       
-      </ion-list>
-   
-      <h3 class="forgot" >Forgot password?</h3>
-   
-  <div class="loginbtn">
-    <ion-button>Login</ion-button>
-    </div>
+      <ion-item no-lines *ngIf="(group.get('UserName').hasError('required') || group.get('UserName').hasError('email') ) && group.get('UserName').touched">         
+          <div class="error" *ngIf="group.get('UserName').hasError('required') && group.get('UserName').touched">
+            Email is required
+          </div>
+          <div class="error" *ngIf="group.get('UserName').hasError('email') && group.get('UserName').touched">
+            Please enter valid email
+          </div>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="Password"></ion-input>
+      </ion-item>
+      <ion-item no-lines *ngIf="(group.get('Password').hasError('required') || group.get('Password').hasError('minlength') ) && group.get('Password').touched">         
+        <div class="error" *ngIf="group.get('Password').hasError('required') && group.get('Password').touched">
+          Password is required
+        </div>
+        <div class="error" *ngIf="group.get('Password').hasError('minlength') && group.get('Password').touched">
+          Password must be at least 6 characters long.
+        </div>
+      </ion-item>
+      
+    </ion-list>
+    <ion-button class="loginbtn" [disabled]="group.invalid">Login</ion-button>
+  </form>
+  <div class="forgot">
+    <h3 >Forgot password?</h3>
+  </div>
   <div class="footer">
     <h3 > Dont have an account?<a routerLink="/register">Register</a> </h3>
   </div>

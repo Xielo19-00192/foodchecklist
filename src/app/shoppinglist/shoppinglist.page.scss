@@ -1,0 +1,59 @@
+.body{
+    --background:white;
+.header{
+    --background:#F9CEDF;
+    height: 150px;
+    
+    ion-buttons{
+      
+        color: white;}
+        
+        ion-menu-button {
+          font-size: 100px !important;
+          font-weight: 500 !important;
+        }
+        
+      .categ1{
+        position: relative;
+        bottom: 5px;    
+        left: 32px;
+        font-size: 40px;
+        color: white;
+        font-family: "LatoRegular";
+        line-height: 48px;
+      }
+      .list{
+        width: 60% !important;
+        max-width: 60% !important;
+        padding-left: 0 !important;
+       left: 30px;
+        top: -10px;
+      }
+    }     
+
+
+.footer{
+    bottom: -680px;
+    --background:#FCEECB;
+    padding: 30px;
+    color: #8CBBF1;
+    top: 660px;
+   
+    ion-col{
+      left: 40px;   
+    } 
+ 
+}
+.circlebtn{
+  position: relative;
+    bottom: -450px;
+    right: -350px;
+
+  ion-button[shape=circle] {
+    --border-radius: 50%;
+    width: 56px;
+    height: 56px; 
+
+}
+}
+}

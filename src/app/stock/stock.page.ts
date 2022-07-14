@@ -11,5 +11,11 @@ export class StockPage implements OnInit {
 
   ngOnInit() {
   }
-
+note='There are no items here' ;
+showData($event: any){ 
+  console.log("button is clicked!"); if($event) { 
+     console.log($event.target); 
+     console.log($event.target.value); 
+  } 
+} 
 }
