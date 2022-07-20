@@ -69,6 +69,7 @@
 .body .footer ion-col .inventory {
   position: relative;
   left: -15px;
+  color: #428cff;
 }
 .body .footer ion-col .shopping {
   position: relative;
@@ -77,14 +78,22 @@
 .body .footer ion-col .exp {
   position: relative;
   left: -5px;
-  color: #428cff;
 }
 .body .footer ion-col ion-icon {
   font-size: 30px;
 }
-.body .note {
+.body .circlebtn {
   position: relative;
-  bottom: -100px;
+  bottom: -400px;
+  right: -320px;
+}
+.body .circlebtn ion-button[shape=circle] {
+  --border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+.body .circlebtn ion-button[shape=circle] ion-icon {
+  font-size: 40px;
 }
 .body .note img {
   width: 208px;
