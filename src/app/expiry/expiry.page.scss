@@ -1,0 +1,132 @@
+.body{
+    --background:white;
+    .menutool{
+      --background:#F9CEDF;
+      ion-buttons{
+        
+        color: white;
+        position: relative;
+        left: 10px;
+      }
+          ion-menu-button {
+            font-size: 100px !important;
+            font-weight: 500 !important;
+          }  
+   }
+  .header{
+    --background:#F9CEDF;
+    height: 150px;
+  
+      .categ1{
+        position: relative;
+        bottom: 5px;    
+        left: 23px;
+        font-size: 40px;
+        color: white;
+        font-family: "LatoRegular";
+        line-height: 48px;
+      }
+      .list{
+        width: 200px !important;
+        position: relative;
+        left: 20px;
+        top: 10px;
+        border-radius: 20px;
+       
+      }
+      .total{
+        position: relative;
+        left: 250px;
+        bottom: -92px;
+        color: black;
+        width:150px;
+        border-color: white;
+        border-width: thin;
+        border-style: solid;
+        border-radius: 15px;
+        color: white;
+        ion-label{
+          position: relative;
+          left: 5px;
+          font-family: 'LatoRegular';
+          font-size: 16px;
+          color: white;
+        }   
+      
+      }
+      .Inventorygroup{
+        position: relative;
+        top: -40px;
+      }
+    }     
+  
+  
+  .footer{
+    bottom: -680px;
+    --background:#FCEECB;
+    padding: 20px;
+    color: grey;
+    top: 610px;
+   
+    ion-col{
+      left: 40px; 
+      .inventory{
+        position: relative;
+        left: -15px;
+      
+      }
+      .shopping{
+        position: relative;
+        left: -32px;
+      
+      
+      }
+      .exp{
+        position: relative;
+        left: -5px;
+        color: #428cff;
+      }
+      ion-icon{
+       
+       font-size: 30px;
+     
+      }  
+    } 
+  
+  }
+  .circlebtn{
+  position: relative;
+    bottom: -400px;
+    right: -320px;
+  
+  ion-button[shape=circle] {
+    --border-radius: 50%;
+    width: 80px;
+    height: 80px; 
+    ion-icon{
+      font-size: 40px;
+    }
+  
+  }
+  }
+  
+  .note{
+    position: relative;
+    bottom: -100px;
+    
+    img{
+    width: 208px;
+    height: 237px;
+    position: relative;
+    left: 110px;
+    top: -20px;
+  }
+  ion-label{
+    position: relative;
+    left: 105px;
+    display: flex;
+    font-family: 'ibmplexmonoregular';
+    font-size: 12;
+  }
+  }
+  }
