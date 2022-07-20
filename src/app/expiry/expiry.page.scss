@@ -94,21 +94,6 @@
     } 
   
   }
-  .circlebtn{
-  position: relative;
-    bottom: -400px;
-    right: -320px;
-  
-  ion-button[shape=circle] {
-    --border-radius: 50%;
-    width: 80px;
-    height: 80px; 
-    ion-icon{
-      font-size: 40px;
-    }
-  
-  }
-  }
   
   .note{
     position: relative;

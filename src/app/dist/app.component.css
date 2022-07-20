@@ -1,0 +1,40 @@
+ion-app .header {
+  --background:#F9CEDF;
+  height: 205px;
+}
+ion-app .header h1 {
+  background: white !important;
+  color: black;
+}
+ion-app .header .profile {
+  position: relative;
+  height: 120% px;
+  top: -70px;
+  left: -70px;
+}
+ion-app .header .profile ion-avatar {
+  position: relative;
+  left: 50px;
+}
+ion-app ion-content {
+  --background:white;
+  max-height: 100%;
+}
+ion-app ion-content ion-list {
+  height: 100%;
+}
+ion-app ion-content ion-list ion-item {
+  border: 0px;
+  color: grey;
+  letter-spacing: 3px;
+  right: -50px;
+  bottom: -150px;
+}
+ion-app ion-content ion-list ion-item ion-label {
+  color: grey;
+  font-family: "LatoRegular";
+  font-size: 16px;
+}
+ion-app ion-content ion-list .logout ion-item {
+  bottom: -400px;
+}
