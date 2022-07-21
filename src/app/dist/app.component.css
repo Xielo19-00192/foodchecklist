@@ -8,13 +8,25 @@ ion-app .header h1 {
 }
 ion-app .header .profile {
   position: relative;
-  height: 120% px;
-  top: -70px;
-  left: -70px;
+  top: 10px;
+  left: -10px;
 }
-ion-app .header .profile ion-avatar {
+ion-app .header .profile ion-item ion-avatar {
+  background-color: #F9CEDF;
+  width: 100% !important;
+  height: 150px !important;
+  max-width: 100px;
+  max-height: 100px;
+}
+ion-app .header .profile ion-item ion-avatar img {
+  width: 300px;
+  height: 300px;
   position: relative;
-  left: 50px;
+}
+ion-app .header .profile ion-item ion-avatar ion-label {
+  position: relative;
+  top: -330px;
+  left: -500px;
 }
 ion-app ion-content {
   --background:white;

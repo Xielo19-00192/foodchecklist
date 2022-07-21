@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shoppinglist',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppinglistPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,4 +19,13 @@ export class ShoppinglistPage implements OnInit {
        console.log($event.target.value); 
     }
 }
+btnClick1= function () {
+  this.router.navigateByUrl('/stock');
+};
+btnClick2= function () {
+  this.router.navigateByUrl('/shoppinglist');
+};
+btnClick3= function () {
+  this.router.navigateByUrl('/expiry');
+};
 }

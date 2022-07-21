@@ -6,10 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.ExpiryPage = void 0;
+exports.StockPage = void 0;
 var core_1 = require("@angular/core");
-var ExpiryPage = /** @class */ (function () {
-    function ExpiryPage(router) {
+var StockPage = /** @class */ (function () {
+    function StockPage(router) {
         this.router = router;
         this.note = 'There are no items here';
         this.btnClick1 = function () {
@@ -22,22 +22,22 @@ var ExpiryPage = /** @class */ (function () {
             this.router.navigateByUrl('/expiry');
         };
     }
-    ExpiryPage.prototype.ngOnInit = function () {
+    StockPage.prototype.ngOnInit = function () {
     };
-    ExpiryPage.prototype.showData = function ($event) {
+    StockPage.prototype.showData = function ($event) {
         console.log("button is clicked!");
         if ($event) {
             console.log($event.target);
             console.log($event.target.value);
         }
     };
-    ExpiryPage = __decorate([
+    StockPage = __decorate([
         core_1.Component({
-            selector: 'app-expiry',
-            templateUrl: './expiry.page.html',
-            styleUrls: ['./expiry.page.scss']
+            selector: 'app-stock',
+            templateUrl: './stock.page.html',
+            styleUrls: ['./stock.page.scss']
         })
-    ], ExpiryPage);
-    return ExpiryPage;
+    ], StockPage);
+    return StockPage;
 }());
-exports.ExpiryPage = ExpiryPage;
+exports.StockPage = StockPage;

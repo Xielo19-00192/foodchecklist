@@ -1,25 +1,40 @@
 ion-app{
     .header{
         --background:#F9CEDF;
-        height: 205px;
+        --min-height:205px!important;
         h1{
           background: white !important;
           color: black;      
         }     
         .profile{
             position: relative;
-            height: 120%px;
-            top: -70px;
-            left: -70px;    
-            ion-avatar{
+          
+            top: 5px;
+            
+            
+            ion-avatar {
+                background-color: white;
+                width:100% !important;  
+                height : 100% !important;  
+                max-width: 100px;
+                max-height: 100px;   
                 position: relative;
-                left: 50px;
+                left: 20px;
+                
+                
+            }ion-label{
+                position: relative;
+                left: 32px;
+                bottom:-20px;
+                color: grey;
+                font-family: "LatoRegular";
+                letter-spacing: 1px;
             }
         }      
     }  
     ion-content{   
         --background:white; 
-        max-height: 100%;
+       
         ion-list{
             height: 100%;   
             ion-item{

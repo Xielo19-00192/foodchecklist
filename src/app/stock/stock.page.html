@@ -25,22 +25,22 @@
     <ion-grid>
       <ion-row>
       <ion-col col-4>
-        <ion-buttons end (click)="onClick()" fill="clear" routerLink="/stock">
+        <ion-buttons end (click)="btnClick1()" fill="clear" routerLink="/stock">
           <ion-icon  name="cart" color="primary"></ion-icon> 
       </ion-buttons>
-      <ion-labels class="inventory" routerLink="/stock">Inventory</ion-labels>
+      <ion-label class="inventory" (click)="btnClick1()">Inventory</ion-label>
     </ion-col>
     <ion-col col-4>
-      <ion-buttons end (click)="onClick()" fill="clear"  routerLink="/shoppinglist">
+      <ion-buttons end (click)="btnClick2()" fill="clear"  >
           <ion-icon name="list"></ion-icon>
       </ion-buttons >  
-      <ion-labels class="shopping"  routerLink="/shoppinglist">Shopping List </ion-labels>
+      <ion-label class="shopping"  (click)="btnClick2()" >Shopping List </ion-label>
     </ion-col>
     <ion-col col-4>
-      <ion-buttons end (click)="onClick()" fill="clear" routerLink="/expiry">
+      <ion-buttons end (click)="btnClick3()" fill="clear" routerLink="/expiry">
           <ion-icon name="alert" ></ion-icon>
       </ion-buttons>
-      <ion-labels class="exp" routerLink="/expiry">Expiry</ion-labels>
+      <ion-label class="exp" (click)="btnClick3()" >Expiry</ion-label>
     </ion-col>
     </ion-row>
     </ion-grid>

@@ -6,10 +6,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.ExpiryPage = void 0;
+exports.ShoppinglistPage = void 0;
 var core_1 = require("@angular/core");
-var ExpiryPage = /** @class */ (function () {
-    function ExpiryPage(router) {
+var ShoppinglistPage = /** @class */ (function () {
+    function ShoppinglistPage(router) {
         this.router = router;
         this.note = 'There are no items here';
         this.btnClick1 = function () {
@@ -22,22 +22,22 @@ var ExpiryPage = /** @class */ (function () {
             this.router.navigateByUrl('/expiry');
         };
     }
-    ExpiryPage.prototype.ngOnInit = function () {
+    ShoppinglistPage.prototype.ngOnInit = function () {
     };
-    ExpiryPage.prototype.showData = function ($event) {
+    ShoppinglistPage.prototype.showData = function ($event) {
         console.log("button is clicked!");
         if ($event) {
             console.log($event.target);
             console.log($event.target.value);
         }
     };
-    ExpiryPage = __decorate([
+    ShoppinglistPage = __decorate([
         core_1.Component({
-            selector: 'app-expiry',
-            templateUrl: './expiry.page.html',
-            styleUrls: ['./expiry.page.scss']
+            selector: 'app-shoppinglist',
+            templateUrl: './shoppinglist.page.html',
+            styleUrls: ['./shoppinglist.page.scss']
         })
-    ], ExpiryPage);
-    return ExpiryPage;
+    ], ShoppinglistPage);
+    return ShoppinglistPage;
 }());
-exports.ExpiryPage = ExpiryPage;
+exports.ShoppinglistPage = ShoppinglistPage;
