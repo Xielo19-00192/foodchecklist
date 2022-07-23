@@ -17,6 +17,10 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'startup',
+    loadChildren: () => import('./startup/startup.module').then( m => m.StartupPageModule)
+  },
+  {
     path: 'stock',
     loadChildren: () => import('./stock/stock.module').then( m => m.StockPageModule)
   },
@@ -28,6 +32,12 @@ const routes: Routes = [
     path: 'expiry',
     loadChildren: () => import('./expiry/expiry.module').then( m => m.ExpiryPageModule)
   },
+ 
+  {
+    path: 'aboutus',
+    loadChildren: () => import('./aboutus/aboutus.module').then( m => m.AboutusPageModule)
+  },
+
  
 
   
