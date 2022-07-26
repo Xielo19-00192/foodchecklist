@@ -7,6 +7,7 @@ ion-content{
         font-weight: 600;
         font-size: 16px; 
         line-height: 21px;
+       
   
       }
     .logo{
@@ -72,17 +73,18 @@ ion-content{
       }  }
       .loginbtn{
         position: absolute;
-        left: 202px;
-        top: 680px;
+        left: 150px;
+        top: 225px;
+      
         width: 157px;
         height: 48px;
       }
       .forgot{h3{
         position: absolute;
-        left: 53px;
+        left: 70px;
         top: 680px;
         font-family: 'LatoRegular';
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 20px;
         letter-spacing: 0.165em;
