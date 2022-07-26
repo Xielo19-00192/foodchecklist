@@ -19,8 +19,6 @@ Manage Food Inventory
 
 -Can edit, delete the entered informations.
 
--Scan using barcode of a specific item to enter the product name. 
-
 -Users must login and register to manage and use the system
     
  Create shopping list
