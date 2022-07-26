@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { Component} from '@angular/core';
+
 
 
 
@@ -9,14 +9,13 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage  {
+  username: string=""
+  password:string=""
+  constructor(){}
 
-  group: FormGroup;
-  ngOnInit(){
-    this.group = new FormGroup({
-      UserName : new FormControl('',[Validators.required, Validators.email]),
-      Password : new FormControl('',[Validators.required, Validators.minLength(6)])
-    })
-  }
+ 
+login(){
 
+}
 
 }

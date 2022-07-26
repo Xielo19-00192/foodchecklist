@@ -4,37 +4,21 @@
      <h2>FoodChecklist</h2>
      <h3>Login</h3>
   </div> 
-  <form novalidate [formGroup]="group" (ngSubmit)="onSubmit(group)">
+
     <ion-list >
       <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" formControlName="UserName"></ion-input>
+        <ion-input type="text" [(ngModel)]="username"></ion-input>
       </ion-item>
       
-      <ion-item no-lines *ngIf="(group.get('UserName').hasError('required') || group.get('UserName').hasError('email') ) && group.get('UserName').touched">         
-          <div class="error" *ngIf="group.get('UserName').hasError('required') && group.get('UserName').touched">
-            Email is required
-          </div>
-          <div class="error" *ngIf="group.get('UserName').hasError('email') && group.get('UserName').touched">
-            Please enter valid email
-          </div>
-      </ion-item>
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" formControlName="Password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password"></ion-input>
       </ion-item>
-      <ion-item no-lines *ngIf="(group.get('Password').hasError('required') || group.get('Password').hasError('minlength') ) && group.get('Password').touched">         
-        <div class="error" *ngIf="group.get('Password').hasError('required') && group.get('Password').touched">
-          Password is required
-        </div>
-        <div class="error" *ngIf="group.get('Password').hasError('minlength') && group.get('Password').touched">
-          Password must be at least 6 characters long.
-        </div>
-      </ion-item>
-      
+   
     </ion-list>
-    <ion-button class="loginbtn" [disabled]="group.invalid">Login</ion-button>
-  </form>
+    <ion-button class="loginbtn"  (click)="login()">Login</ion-button>
+
   <div class="forgot">
     <h3 >Forgot password?</h3>
   </div>
