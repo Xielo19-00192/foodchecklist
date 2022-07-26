@@ -1,0 +1,100 @@
+ion-content {
+  --background:white;
+}
+ion-content ion-button {
+  --background: #FCEECB;
+  font-family: "ibmplexmonoregular";
+  color: #F9B200;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+ion-content .logo {
+  position: absolute;
+  width: 478px;
+  height: 633px;
+  left: -25px;
+  top: 60px;
+}
+ion-content .header h2 {
+  position: absolute;
+  width: 247px;
+  height: 44px;
+  left: 90px;
+  top: 309px;
+  font-family: "ibmplexmono";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #8CBBF1;
+}
+ion-content .header h3 {
+  position: absolute;
+  width: 350px;
+  height: 113px;
+  left: 39px;
+  top: 365px;
+  font-family: "ibmplexmonoregular";
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+  color: #8CBBF1;
+}
+ion-content .form {
+  position: absolute;
+  width: 322px;
+  height: 145px;
+  left: 53px;
+  top: 450px;
+  color: #6D6D6D;
+  padding: 10px;
+}
+ion-content .form ion-item {
+  padding: 5px;
+  color: #6D6D6D;
+  --border-color: var(--ion-color-medium, #989aa2) ;
+}
+ion-content .form ion-item ion-label {
+  color: #6D6D6D;
+  right: 50px;
+}
+ion-content .loginbtn {
+  position: absolute;
+  left: 202px;
+  top: 680px;
+  width: 157px;
+  height: 48px;
+}
+ion-content .forgot h3 {
+  position: absolute;
+  left: 53px;
+  top: 680px;
+  font-family: "LatoRegular";
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.165em;
+  color: #8CBBF1;
+}
+ion-content .footer h3 {
+  position: absolute;
+  width: 326px;
+  height: 49px;
+  left: 51px;
+  top: 760px;
+  font-family: "LatoRegular";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.165em;
+  color: #343535;
+  text-align: center;
+  pointer-events: visible;
+}
+ion-content .footer h3 a {
+  color: #8CBBF1;
+  font-weight: 800;
+  text-decoration: none;
+}

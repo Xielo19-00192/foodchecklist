@@ -42,38 +42,38 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.LoginPage = void 0;
+exports.RegisterPage = void 0;
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
-var LoginPage = /** @class */ (function () {
-    function LoginPage(fb, loadingController, alertController, authService, router) {
+var RegisterPage = /** @class */ (function () {
+    function RegisterPage(fb, loadingController, alertController, authService, router) {
         this.fb = fb;
         this.loadingController = loadingController;
         this.alertController = alertController;
         this.authService = authService;
         this.router = router;
     }
-    Object.defineProperty(LoginPage.prototype, "email", {
+    Object.defineProperty(RegisterPage.prototype, "email", {
         get: function () {
             return this.credentials.get('email');
         },
         enumerable: false,
         configurable: true
     });
-    Object.defineProperty(LoginPage.prototype, "password", {
+    Object.defineProperty(RegisterPage.prototype, "password", {
         get: function () {
             return this.credentials.get('password');
         },
         enumerable: false,
         configurable: true
     });
-    LoginPage.prototype.ngOnInit = function () {
+    RegisterPage.prototype.ngOnInit = function () {
         this.credentials = this.fb.group({
             email: ['', [forms_1.Validators.required, forms_1.Validators.email]],
             password: ['', [forms_1.Validators.required, forms_1.Validators.minLength(6)]]
         });
     };
-    LoginPage.prototype.login = function () {
+    RegisterPage.prototype.register = function () {
         return __awaiter(this, void 0, void 0, function () {
             var loading, user;
             return __generator(this, function (_a) {
@@ -84,24 +84,24 @@ var LoginPage = /** @class */ (function () {
                         return [4 /*yield*/, loading.present()];
                     case 2:
                         _a.sent();
-                        return [4 /*yield*/, this.authService.login(this.credentials.value)];
+                        return [4 /*yield*/, this.authService.register(this.credentials.value)];
                     case 3:
                         user = _a.sent();
                         return [4 /*yield*/, loading.dismiss()];
                     case 4:
                         _a.sent();
                         if (user) {
-                            this.router.navigateByUrl('/stock', { replaceUrl: true });
+                            this.router.navigateByUrl('/login', { replaceUrl: true });
                         }
                         else {
-                            this.showAlert('Login failed', 'Please try again!');
+                            this.showAlert('Registration failed', 'Please try again!');
                         }
                         return [2 /*return*/];
                 }
             });
         });
     };
-    LoginPage.prototype.showAlert = function (header, message) {
+    RegisterPage.prototype.showAlert = function (header, message) {
         return __awaiter(this, void 0, void 0, function () {
             var alert;
             return __generator(this, function (_a) {
@@ -121,13 +121,13 @@ var LoginPage = /** @class */ (function () {
             });
         });
     };
-    LoginPage = __decorate([
+    RegisterPage = __decorate([
         core_1.Component({
-            selector: 'app-login',
-            templateUrl: './login.page.html',
-            styleUrls: ['./login.page.scss']
+            selector: 'app-register',
+            templateUrl: './register.page.html',
+            styleUrls: ['./register.page.scss']
         })
-    ], LoginPage);
-    return LoginPage;
+    ], RegisterPage);
+    return RegisterPage;
 }());
-exports.LoginPage = LoginPage;
+exports.RegisterPage = RegisterPage;

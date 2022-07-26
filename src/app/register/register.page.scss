@@ -31,14 +31,16 @@ ion-content{
             color: #8CBBF1;
         }
      }
-     ion-list{
+     .form{
+        padding: 20px;
         position: absolute;
         width: 322px;
         height: 300px;
         left: 53px;
-        top: 314px;
+        top: 350px;
         color: #6D6D6D;
         ion-item{
+            padding: 10px;
             color: #6D6D6D;   
             --border-color: var(--ion-color-medium, #989aa2) ;
             ion-label{
@@ -49,8 +51,8 @@ ion-content{
      }
      .loginbtn{
         position: absolute;
-        left: 228px;
-        top: 627px;
+        left: 190px;
+        top: 570px;
      }  
         ion-button{
             width: 157px;

@@ -3,31 +3,23 @@
   <div class="header">
     <h1>Register</h1>
   </div>
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Name</ion-label>
-          <ion-input placeholder="Fullname" type="text" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Email</ion-label>
-          <ion-input placeholder="*Example@gmail.com" type="email" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Country</ion-label>
-          <ion-input placeholder="*Philippines" type="text" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input placeholder="Password" type="password" ></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Confirm Password</ion-label>
-      <ion-input placeholder="Confirm password"type="password" ></ion-input>
-    </ion-item>
-  </ion-list>
-  <div class="loginbtn">
-    <ion-button (click)="register()">Register </ion-button>
-  </div>
+
+    <form class="form"  [formGroup]="credentials">
+      <ion-item>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
+      </ion-item>
+   
+     
+      
+    </form>
+    <ion-button class="loginbtn" type="button" expand="block"  (click)="register()">Create account</ion-button>
+  
+  
   <div class="footer">
     <h3 > Already have an account?<a routerLink="/login">Login</a> </h3>
   </div>

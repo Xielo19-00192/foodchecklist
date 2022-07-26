@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "foodchecklist-c5732"
+  },
+  "targets": {
+    "foodchecklist-c5732": {
+      "hosting": {
+        "app": [
+          "foodchecklist-c5732"
+        ]
+      }
+    }
   }
 }

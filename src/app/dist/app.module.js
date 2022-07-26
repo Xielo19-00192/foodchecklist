@@ -12,14 +12,14 @@ var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var forms_1 = require("@angular/forms");
 var angular_1 = require("@ionic/angular");
-var compat_1 = require("@angular/fire/compat");
-var auth_1 = require("@angular/fire/compat/auth");
-var storage_1 = require("@angular/fire/compat/storage");
-var firestore_1 = require("@angular/fire/compat/firestore");
-var database_1 = require("@angular/fire/compat/database");
+var auth_1 = require("@angular/fire/auth");
+var firestore_1 = require("@angular/fire/firestore");
+var common_1 = require("@angular/common");
 var environment_1 = require("../environments/environment");
 var app_component_1 = require("./app.component");
 var app_routing_module_1 = require("./app-routing.module");
+var app_1 = require("@angular/fire/app");
+var app_2 = require("firebase/app");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,11 +27,8 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [app_component_1.AppComponent],
             imports: [platform_browser_1.BrowserModule, angular_1.IonicModule.forRoot(), app_routing_module_1.AppRoutingModule, forms_1.ReactiveFormsModule,
-                forms_1.FormsModule, compat_1.AngularFireModule.initializeApp(environment_1.environment.firebaseConfig),
-                auth_1.AngularFireAuthModule,
-                firestore_1.AngularFirestoreModule,
-                storage_1.AngularFireStorageModule,
-                database_1.AngularFireDatabaseModule,],
+                forms_1.FormsModule, common_1.CommonModule, app_1.provideFirebaseApp(function () { return app_2.initializeApp(environment_1.environment.firebaseConfig); }),
+                auth_1.provideAuth(function () { return auth_1.getAuth(); }), firestore_1.provideFirestore(function () { return firestore_1.getFirestore(); })],
             providers: [{ provide: router_1.RouteReuseStrategy, useClass: angular_1.IonicRouteStrategy }],
             bootstrap: [app_component_1.AppComponent]
         })

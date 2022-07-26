@@ -39,7 +39,7 @@ ion-content{
             width: 350px;
             height: 113px;
             left: 39px;
-            top: 407px;
+            top: 365px;
             font-family: 'ibmplexmonoregular';
             font-weight: 400;
             font-size: 50px;
@@ -50,17 +50,18 @@ ion-content{
     
 }
 
-    ion-list{
+   .form{
        
         
         position: absolute;
         width: 322px;
         height: 145px;
         left: 53px;
-        top: 498px;
+        top: 450px;
         color: #6D6D6D;
         padding: 10px;
         ion-item{
+          padding: 5px;
             color: #6D6D6D;   
             --border-color: var(--ion-color-medium, #989aa2) ;
             
@@ -71,17 +72,17 @@ ion-content{
       }  }
       .loginbtn{
         position: absolute;
-        left: 228px;
-        top: 670px;
+        left: 202px;
+        top: 680px;
         width: 157px;
         height: 48px;
       }
       .forgot{h3{
         position: absolute;
         left: 53px;
-        top: 620px;
+        top: 680px;
         font-family: 'LatoRegular';
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 500;
         line-height: 20px;
         letter-spacing: 0.165em;

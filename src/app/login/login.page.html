@@ -4,20 +4,24 @@
      <h2>FoodChecklist</h2>
      <h3>Login</h3>
   </div> 
-
-    <ion-list >
-      <ion-item>
+ 
+  <form  class="form" (ngSubmit)="login()" [formGroup]="credentials">
+    <ion-item>
         <ion-label position="floating">Email</ion-label>
-        <ion-input type="text" [(ngModel)]="username"></ion-input>
+        <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+        <ion-note slot="error" *ngIf="(email.dirty || email.touched) && email.errors">Email is invalid</ion-note>
       </ion-item>
-      
       <ion-item>
         <ion-label position="floating">Password</ion-label>
-        <ion-input type="password" [(ngModel)]="password"></ion-input>
+        <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+        <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors">Password needs to be 6 characters</ion-note>
       </ion-item>
+ 
    
-    </ion-list>
-    <ion-button class="loginbtn"  (click)="login()">Login</ion-button>
+ 
+      
+  </form>
+  <ion-button class="loginbtn" type="submit" expand="block" [disabled]="!credentials.valid">Log in</ion-button>
 
   <div class="forgot">
     <h3 >Forgot password?</h3>
