@@ -6,12 +6,12 @@
   </ion-toolbar>
   <ion-toolbar class="header">
     <div class="total">
-      <ion-input ><ion-label>Total:</ion-label></ion-input>
+      <ion-input ><ion-label>Total: </ion-label></ion-input>
     </div>
     <div class="Inventorygroup">
       <h1 class="categ1">Inventory</h1>
-      <ion-item class="list">
-        <ion-label>Select Category</ion-label>
+      <ion-item class="list" lines="none">
+        <ion-label >Select Category</ion-label>
         <ion-select   [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="">
           <ion-select-option value="drink">Drink</ion-select-option>
           <ion-select-option value="Frozen Foods">Frozen</ion-select-option>
@@ -50,10 +50,27 @@
       <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
     </ion-button>
   </div>
-  <div class="note">
-    <img src="assets/img/ref.png" alt="">
-    <ion-label>{{note}}</ion-label>
-  </div>
+  <div class="items" >
+  <ion-list>
+    <ion-item *ngFor="let note of notes" (click)="openItem(notes)" >
+  
+
+      <ion-label >
+        {{note.productName}}
+        <ion-img  src="assets/img/ref.png" alt="" *ngIf="(note.productName == 0)" ></ion-img>
+        
+        
+      
+      </ion-label>
+      
+    </ion-item>
+    
+  </ion-list>
+  
+</div>
+    
+    
+
 
   </ion-content>
 
