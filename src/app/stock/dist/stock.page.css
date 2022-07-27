@@ -97,17 +97,11 @@
 .body .circlebtn ion-button[shape=circle] ion-icon {
   font-size: 40px;
 }
-.body .note img {
-  width: 208px;
-  height: 237px;
-  position: relative;
-  left: 110px;
-  top: -20px;
+.body .items {
+  padding: 30px;
+  text-align: center;
 }
-.body .note ion-label {
-  position: relative;
-  left: 105px;
-  display: flex;
-  font-family: "ibmplexmonoregular";
-  font-size: 12;
+.body .items ion-img {
+  width: 300px;
+  height: 200px;
 }

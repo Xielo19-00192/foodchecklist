@@ -6,35 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.StockPage = void 0;
+exports.TestPage = void 0;
 var core_1 = require("@angular/core");
-var StockPage = /** @class */ (function () {
-    function StockPage(router, dataService) {
+var TestPage = /** @class */ (function () {
+    function TestPage(dataService) {
         var _this = this;
-        this.router = router;
         this.dataService = dataService;
         this.notes = [];
-        this.btnClick1 = function () {
-            this.router.navigateByUrl('/stock');
-        };
-        this.btnClick2 = function () {
-            this.router.navigateByUrl('/shoppinglist');
-        };
-        this.btnClick3 = function () {
-            this.router.navigateByUrl('/expiry');
-        };
         this.dataService.getNotes().subscribe(function (res) {
             console.log(res);
             _this.notes = res;
         });
     }
-    StockPage = __decorate([
+    TestPage = __decorate([
         core_1.Component({
-            selector: 'app-stock',
-            templateUrl: './stock.page.html',
-            styleUrls: ['./stock.page.scss']
+            selector: 'app-test',
+            templateUrl: './test.page.html',
+            styleUrls: ['./test.page.scss']
         })
-    ], StockPage);
-    return StockPage;
+    ], TestPage);
+    return TestPage;
 }());
-exports.StockPage = StockPage;
+exports.TestPage = TestPage;
