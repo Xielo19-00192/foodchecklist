@@ -53,6 +53,6 @@ Manage Food Inventory
 
 **Manual**/**With Items**
 
-![Alt text](/Images/gui/manual.png "Optional title")                                  ![Alt text](/Images/gui/items.png "Optional title")  
+![Alt text](/Images/gui/items.png "Optional title")  
 
 
