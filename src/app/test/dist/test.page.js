@@ -9,12 +9,12 @@ exports.__esModule = true;
 exports.TestPage = void 0;
 var core_1 = require("@angular/core");
 var TestPage = /** @class */ (function () {
-    function TestPage(dataService) {
+    function TestPage(dataService, alertCtrl) {
         var _this = this;
         this.dataService = dataService;
+        this.alertCtrl = alertCtrl;
         this.notes = [];
         this.dataService.getNotes().subscribe(function (res) {
-            console.log(res);
             _this.notes = res;
         });
     }

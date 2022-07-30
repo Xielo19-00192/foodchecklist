@@ -1,10 +1,8 @@
 
 <ion-content>
 <ion-list>
-  <ion-item *ngFor="let note of notes" (click)="openItem(notes)" >
-    <ion-label >
-      {{note.productName}}
-    </ion-label>
+  <ion-item *ngFor="let note of notes ">
+    <ion-label>{{ note.productName }} </ion-label>
   </ion-item>
-</ion-list>
+ </ion-list>
 </ion-content>

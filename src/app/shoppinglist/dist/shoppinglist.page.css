@@ -84,17 +84,13 @@
 }
 .body .circlebtn {
   position: relative;
-  bottom: -400px;
-  right: -320px;
-}
-.body .circlebtn ion-button[shape=circle] {
-  --background: #8CBBF1;
-  --border-radius: 50%;
+  bottom: -500px;
+  left: 320px;
   width: 80px;
   height: 80px;
   --box-shadow: 0px 5px 10px grey;
 }
-.body .circlebtn ion-button[shape=circle] ion-icon {
+.body .circlebtn ion-icon {
   font-size: 40px;
 }
 .body .note img {

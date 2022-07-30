@@ -1,0 +1,6 @@
+ion-content {
+  --background:white;
+}
+ion-content ion-label {
+  color: black;
+}

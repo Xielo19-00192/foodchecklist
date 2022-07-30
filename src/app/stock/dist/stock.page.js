@@ -9,11 +9,8 @@ exports.__esModule = true;
 exports.StockPage = void 0;
 var core_1 = require("@angular/core");
 var StockPage = /** @class */ (function () {
-    function StockPage(router, dataService) {
-        var _this = this;
+    function StockPage(router) {
         this.router = router;
-        this.dataService = dataService;
-        this.notes = [];
         this.btnClick1 = function () {
             this.router.navigateByUrl('/stock');
         };
@@ -23,10 +20,6 @@ var StockPage = /** @class */ (function () {
         this.btnClick3 = function () {
             this.router.navigateByUrl('/expiry');
         };
-        this.dataService.getNotes().subscribe(function (res) {
-            console.log(res);
-            _this.notes = res;
-        });
     }
     StockPage = __decorate([
         core_1.Component({

@@ -43,6 +43,18 @@ var routes = [
         path: 'aboutus',
         loadChildren: function () { return Promise.resolve().then(function () { return require('./aboutus/aboutus.module'); }).then(function (m) { return m.AboutusPageModule; }); }
     },
+    {
+        path: 'user',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./user/user.module'); }).then(function (m) { return m.UserPageModule; }); }
+    },
+    {
+        path: 'create',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./create/create.module'); }).then(function (m) { return m.CreatePageModule; }); }
+    },
+    {
+        path: 'test',
+        loadChildren: function () { return Promise.resolve().then(function () { return require('./test/test.module'); }).then(function (m) { return m.TestPageModule; }); }
+    },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

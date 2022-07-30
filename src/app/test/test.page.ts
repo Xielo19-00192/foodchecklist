@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { DataService } from '../services/data.service';
+import { DataService, Note } from '../services/data.service';
+import { Observable } from 'rxjs';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -8,15 +10,13 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./test.page.scss'],
 })
 export class TestPage {
-notes =[];
-  constructor( private dataService: DataService) { 
-    this.dataService.getNotes().subscribe(res =>{
-      console.log(res);
+  notes: Note[] = [];
+ 
+  constructor(private dataService: DataService,private alertCtrl: AlertController) {
+    this.dataService.getNotes().subscribe(res => {
       this.notes = res;
-     
-      
-    })
+    
+    });
   }
-
-
+  
 }

@@ -42,103 +42,64 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
-exports.ShoppinglistPage = void 0;
+exports.CreatePage = void 0;
 var core_1 = require("@angular/core");
-var create_page_1 = require("../create/create.page");
-var ShoppinglistPage = /** @class */ (function () {
-    function ShoppinglistPage(router, cd, dataService, alertCtrl, modalCtrl) {
-        var _this = this;
-        this.router = router;
-        this.cd = cd;
+var CreatePage = /** @class */ (function () {
+    function CreatePage(dataService, modalCtrl, toastCtrl) {
         this.dataService = dataService;
-        this.alertCtrl = alertCtrl;
         this.modalCtrl = modalCtrl;
-        this.notes = [];
-        this.btnClick1 = function () {
-            this.router.navigateByUrl('/stock');
-        };
-        this.btnClick2 = function () {
-            this.router.navigateByUrl('/shoppinglist');
-        };
-        this.btnClick3 = function () {
-            this.router.navigateByUrl('/expiry');
-        };
-        this.dataService.getNotes().subscribe(function (res) {
-            _this.notes = res;
-            _this.cd.detectChanges();
-        });
+        this.toastCtrl = toastCtrl;
+        this.note = null;
     }
-    ShoppinglistPage.prototype.addNote = function () {
+    CreatePage.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.getNoteById(this.id).subscribe(function (res) {
+            _this.note = res;
+        });
+    };
+    CreatePage.prototype.deleteNote = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var alert;
-            var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.alertCtrl.create({
-                            header: 'Add Note',
-                            inputs: [
-                                {
-                                    name: 'productName',
-                                    placeholder: 'Enter product name',
-                                    type: 'text'
-                                },
-                                {
-                                    name: 'quantity',
-                                    placeholder: 'Enter Quantity',
-                                    type: 'number'
-                                }
-                            ],
-                            buttons: [
-                                {
-                                    text: 'Cancel',
-                                    role: 'cancel'
-                                },
-                                {
-                                    text: 'Add',
-                                    handler: function (res) {
-                                        _this.dataService.addNote({ quantity: res.quantity, productName: res.productName });
-                                    }
-                                }
-                            ]
-                        })];
+                    case 0: return [4 /*yield*/, this.dataService.deleteNote(this.note)];
                     case 1:
-                        alert = _a.sent();
-                        return [4 /*yield*/, alert.present()];
-                    case 2:
                         _a.sent();
+                        this.modalCtrl.dismiss();
                         return [2 /*return*/];
                 }
             });
         });
     };
-    ShoppinglistPage.prototype.openNote = function (note) {
+    CreatePage.prototype.updateNote = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var modal;
+            var toast;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.modalCtrl.create({
-                            component: create_page_1.CreatePage,
-                            componentProps: { id: note.id },
-                            breakpoints: [0, 0.5, 0.8],
-                            initialBreakpoint: 0.8
-                        })];
+                    case 0: return [4 /*yield*/, this.dataService.updateNote(this.note)];
                     case 1:
-                        modal = _a.sent();
-                        return [4 /*yield*/, modal.present()];
-                    case 2:
                         _a.sent();
+                        return [4 /*yield*/, this.toastCtrl.create({
+                                message: 'Note updated!.',
+                                duration: 2000
+                            })];
+                    case 2:
+                        toast = _a.sent();
+                        toast.present();
                         return [2 /*return*/];
                 }
             });
         });
     };
-    ShoppinglistPage = __decorate([
+    __decorate([
+        core_1.Input()
+    ], CreatePage.prototype, "id");
+    CreatePage = __decorate([
         core_1.Component({
-            selector: 'app-shoppinglist',
-            templateUrl: './shoppinglist.page.html',
-            styleUrls: ['./shoppinglist.page.scss']
+            selector: 'app-create',
+            templateUrl: './create.page.html',
+            styleUrls: ['./create.page.scss']
         })
-    ], ShoppinglistPage);
-    return ShoppinglistPage;
+    ], CreatePage);
+    return CreatePage;
 }());
-exports.ShoppinglistPage = ShoppinglistPage;
+exports.CreatePage = CreatePage;

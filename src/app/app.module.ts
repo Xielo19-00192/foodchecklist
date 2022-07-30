@@ -6,6 +6,10 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import{provideAuth,getAuth} from '@angular/fire/auth';
 import{provideFirestore,getFirestore} from '@angular/fire/firestore';
 
+
+
+
+
 import {CommonModule } from '@angular/common';
 
 

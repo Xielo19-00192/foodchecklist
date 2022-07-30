@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-stock',
@@ -8,29 +7,23 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./stock.page.scss'],
 })
 export class StockPage  {
-  notes= [];
 
-  constructor(private router: Router, private dataService: DataService) { 
-    this.dataService.getNotes().subscribe(res =>{
-      console.log(res);
-      this.notes = res;
-     
-      
-    })
+ 
+  constructor(private router: Router) {
 
   }
-  
+  btnClick1= function () {
+    this.router.navigateByUrl('/stock');
+  };
+  btnClick2= function () {
+    this.router.navigateByUrl('/shoppinglist');
+  };
+  btnClick3= function () {
+    this.router.navigateByUrl('/expiry');
+  };
 
 
-btnClick1= function () {
-  this.router.navigateByUrl('/stock');
-};
-btnClick2= function () {
-  this.router.navigateByUrl('/shoppinglist');
-};
-btnClick3= function () {
-  this.router.navigateByUrl('/expiry');
-};
+ 
 
 
 }

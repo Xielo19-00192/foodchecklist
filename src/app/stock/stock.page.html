@@ -21,6 +21,12 @@
       </ion-item>
     </div>
   </ion-toolbar>
+  <ion-fab>
+    <ion-fab-button  class="circlebtn" (click)="addNote()">
+     <ion-icon name="add"></ion-icon>
+  
+    </ion-fab-button>
+  </ion-fab>
   <ion-toolbar class="footer">
     <ion-grid >
       <ion-row>
@@ -45,31 +51,9 @@
     </ion-row>
     </ion-grid>
   </ion-toolbar>
-  <div class="circlebtn">
-    <ion-button shape="circle" (click)="showData($event)" >
-      <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
-    </ion-button>
-  </div>
-  <div class="items" >
-  <ion-list>
-    <ion-item *ngFor="let note of notes" (click)="openItem(notes)" >
-  
+ 
 
-      <ion-label >
-        {{note.productName}}
-        <ion-img  src="assets/img/ref.png" alt="" *ngIf="(note.productName == 0)" ></ion-img>
-        
-        
-      
-      </ion-label>
-      
-    </ion-item>
-    
-  </ion-list>
-  
-</div>
-    
-    
+
 
 
   </ion-content>

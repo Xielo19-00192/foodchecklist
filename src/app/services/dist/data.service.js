@@ -32,7 +32,7 @@ var DataService = /** @class */ (function () {
     };
     DataService.prototype.updateNote = function (note) {
         var noteDocRef = firestore_2.doc(this.firestore, "notes/" + note.id);
-        return firestore_1.updateDoc(noteDocRef, { productName: note.productName, expiry: note.expiry, quantity: note.quantity, category: note.category });
+        return firestore_1.updateDoc(noteDocRef, { productName: note.productName, quantity: note.quantity });
     };
     DataService = __decorate([
         core_1.Injectable({

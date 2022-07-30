@@ -4,11 +4,9 @@ import { doc } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 export interface Note{
-  id?:'string';
-  category:'array';
-  productName:'string';
-  expiry: 'timestamp';
-  quantity:'number';
+  id?: string;
+  productName: string;
+  quantity: number;
 
 }
 @Injectable({
@@ -40,7 +38,7 @@ export class DataService {
  
   updateNote(note: Note) {
     const noteDocRef = doc(this.firestore, `notes/${note.id}`);
-    return updateDoc(noteDocRef, { productName: note.productName, expiry: note.expiry, quantity: note.quantity, category: note.category });
+    return updateDoc(noteDocRef, { productName: note.productName, quantity: note.quantity });
   }
 }
 
